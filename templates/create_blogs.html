@@ -13,73 +13,73 @@
   <style>
     body {
       background-color: #f8f9fa;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: Arial, sans-serif;
     }
 
     .form-container {
-      max-width: 700px;
-      margin: 40px auto;
-      background-color: #ffffff;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      max-width: 500px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
     }
 
-    h1 {
-      font-size: 1.8rem;
-      font-weight: 600;
-      margin-bottom: 30px;
+    h2 {
       text-align: center;
+      margin-bottom: 20px;
     }
 
     label {
-      font-weight: 500;
-      margin-bottom: 5px;
+      margin-top: 10px;
+      font-weight: bold;
     }
 
-    .form-control {
-      border-radius: 8px;
-      padding: 10px;
+    .form-control, textarea {
+      margin-bottom: 15px;
+      border-radius: 5px;
+      padding: 8px;
+      width: 100%;
     }
 
-    .btn-submit {
+    button {
       background-color: #0d6efd;
+      color: white;
+      padding: 8px 16px;
       border: none;
-      padding: 0.6rem 2rem;
-      font-size: 1.1rem;
-      border-radius: 50px;
-      box-shadow: 0 4px 10px rgba(13, 110, 253, 0.3);
-      transition: background-color 0.2s ease, transform 0.2s ease;
+      border-radius: 4px;
+      cursor: pointer;
     }
 
-    .btn-submit:hover {
+    button:hover {
       background-color: #0b5ed7;
-      transform: scale(1.03);
+    }
+
+    a {
+      display: block;
+      margin-top: 10px;
+      text-align: center;
     }
   </style>
 </head>
 <body>
-  <div class="container form-container">
-    <h1>Create Your Own Blog</h1>
+  <div class="form-container">
+    <h2>Create Your Own Blog</h2>
     <form action="/blogs" method="post" enctype="multipart/form-data">
-      <div class="mb-3">
-        <label for="title">Blog Title</label>
-        <input type="text" id="title" class="form-control" name="title" required />
-      </div>
-      <div class="mb-3">
-        <label for="content">Blog Content</label>
-        <textarea id="content" class="form-control" name="content" rows="4" required></textarea>
-      </div>
-      <div class="mb-3">
-        <label for="author">Blog Author</label>
-        <input type="text" id="author" class="form-control" name="author" required />
-      </div>
-      <div class="mb-3">
-        <label for="image">Blog Image</label>
-        <input type="file" id="image" class="form-control" name="image" accept="image/*" />
-      </div>
-      <div class="text-center mt-4">
-        <input type="submit" class="btn btn-primary btn-submit" value="Create Blog" />
+      <label for="title">Blog Title:</label>
+      <input type="text" id="title" class="form-control" name="title" required>
+
+      <label for="content">Blog Content:</label>
+      <textarea id="content" class="form-control" name="content" rows="4" required></textarea>
+
+      <label for="author">Blog Author:</label>
+      <input type="text" id="author" class="form-control" name="author" required>
+
+      <label for="image">Blog Image:</label>
+      <input type="file" id="image" class="form-control" name="image" accept="image/*">
+
+      <div class="text-center">
+        <button type="submit">Create Blog</button>
       </div>
     </form>
   </div>
